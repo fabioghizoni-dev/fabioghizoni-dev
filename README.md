@@ -1,4 +1,4 @@
-<h1 align="left">Hey 👋 What's up?</h1>
+<h1 align="left">What are you looking for here??🤨</h1>
 
 ###
 
@@ -10,7 +10,7 @@
 
 ###
 
-<p align="left">✨ Creating bugs since ...<br>📚 I'm currently learning ...<br>🎯 Goals: ...<br>🎲 Fun fact: ...</p>
+<p align="left">💻 Always connected to what I love (technology)<br>🗿 Learning all the time<br>📌 Goals: To be a respectable full stack developer<br></p>
 
 ###
 
