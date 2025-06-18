@@ -1,26 +1,19 @@
-# 🚀 GitHub Commit Blaster
+# 🚀 GitHub Commit Blaster – ASCII Game
 
-🎮 Um minigame em YAML que simula a destruição dos seus commits via GitHub Actions!
+🎮 Um minigame que roda dentro do **GitHub Actions**, simulando uma nave atirando e destruindo seus commits em tempo real, com **ASCII Art + animação**!
 
-### Como jogar:
+## ▶️ Como jogar:
+
 1. Vá na aba **Actions** deste repositório
-2. Selecione **"Destroy Commits - GitHub Game"**
+2. Escolha **"Destroy Commits with Nave 2D"**
 3. Clique em **"Run workflow"**
-4. Veja a destruição dos commits nos logs! 💥
-
-> Não se preocupe — os commits **não serão realmente apagados** 😉
+4. Curta o show nos logs! 🤯
 
 ---
 
-### Captura de Tela:
-![screenshot](https://fakeimg.pl/700x250/?text=GitHub%20Blaster%20Preview&font=lobster)
+🛡️ **Seguro**: seus commits não são realmente apagados  
+🔥 **Opcional**: modo destrutivo com `git reset` (perigoso!)
 
 ---
 
-### 🤯 Quer apagar commits de verdade?
-
-Ative o modo destrutivo no YAML (com `git reset --hard`), mas **só se souber o que está fazendo**!
-
----
-
-🧠 Feito por [@fabioghizoni-dev](https://github.com/fabioghizoni-dev)
+Feito por [@fabioghizoni-dev](https://github.com/fabioghizoni-dev)
