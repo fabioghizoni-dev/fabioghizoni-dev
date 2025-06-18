@@ -5,40 +5,60 @@ on:
 
 jobs:
   game:
-    name: Destruir Commits Inimigos
+    name: Destruir Commits com Nave 2D
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🛠️ Preparar ambiente
+      - name: 🚀 Checkout
         uses: actions/checkout@v4
 
-      - name: 🎮 Iniciando o jogo...
+      - name: 🎮 Iniciando o jogo
         run: |
-          echo "============================="
-          echo "🎮 BEM-VINDO AO COMMIT BLASTER"
-          echo "============================="
           echo ""
-          echo "🚀 Localizando inimigos (commits)..."
-          echo ""
+          echo "=============================="
+          echo "     GITHUB COMMIT BLASTER"
+          echo "=============================="
+          sleep 1
 
+          echo "🔎 Carregando últimos commits..."
+          echo ""
           git log --oneline -n 5 > commits.txt
-          cat commits.txt
 
-          echo ""
-          echo "🔫 Carregando arma..."
-          sleep 2
-
-          echo ""
-          echo "🔥 Atirando nos commits..."
+          i=1
           while read line; do
-            hash=$(echo $line | cut -d' ' -f1)
-            msg=$(echo $line | cut -d' ' -f2-)
-            echo "👉 Alvo detectado: [$hash] $msg"
+            hash=$(echo "$line" | cut -d' ' -f1)
+            msg=$(echo "$line" | cut -d' ' -f2-)
+
+            echo "🎯 Alvo ${i}: [$hash] $msg"
             sleep 1
-            echo "💥 Tiro disparado!"
-            sleep 1
-            echo "✅ Commit eliminado (simulação)"
+
             echo ""
+            echo "🚀 Nave se aproximando..."
+            sleep 1
+
+            # Desenha nave e simula tiro
+            echo "            ↑"
+            echo "            |"
+            echo "           /_\\"
+            echo "          | O |     ← Nave"
+            echo "         /|___|\\"
+            echo "          / | \\"
+            echo "         🚀 FIRE!"
+            sleep 1
+
+            # Simula tiro chegando
+            for d in 1 2 3 4 5; do
+              echo "            |"
+              sleep 0.2
+            done
+
+            echo "          💥 HIT: [$msg]"
+            echo "          ❌ Commit destruído"
+            echo ""
+            echo "-----------------------------"
+            sleep 1
+            i=$((i+1))
           done < commits.txt
 
-          echo "🏁 Missão concluída. Todos os commits destruídos (de mentirinha 😄)"
+          echo ""
+          echo "🏁 Fim da missão! Todos os commits foram neutralizados com sucesso. 😎"
