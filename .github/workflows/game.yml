@@ -1,0 +1,44 @@
+name: Ship Game
+
+on:
+  workflow_dispatch:
+
+jobs:
+  game:
+    name: Destruir Commits Inimigos
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛠️ Preparar ambiente
+        uses: actions/checkout@v4
+
+      - name: 🎮 Iniciando o jogo...
+        run: |
+          echo "============================="
+          echo "🎮 BEM-VINDO AO COMMIT BLASTER"
+          echo "============================="
+          echo ""
+          echo "🚀 Localizando inimigos (commits)..."
+          echo ""
+
+          git log --oneline -n 5 > commits.txt
+          cat commits.txt
+
+          echo ""
+          echo "🔫 Carregando arma..."
+          sleep 2
+
+          echo ""
+          echo "🔥 Atirando nos commits..."
+          while read line; do
+            hash=$(echo $line | cut -d' ' -f1)
+            msg=$(echo $line | cut -d' ' -f2-)
+            echo "👉 Alvo detectado: [$hash] $msg"
+            sleep 1
+            echo "💥 Tiro disparado!"
+            sleep 1
+            echo "✅ Commit eliminado (simulação)"
+            echo ""
+          done < commits.txt
+
+          echo "🏁 Missão concluída. Todos os commits destruídos (de mentirinha 😄)"
